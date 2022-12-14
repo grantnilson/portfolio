@@ -8,7 +8,7 @@ export default function Home() {
     <div>
       <Head>
         <title>Grant's Portfolio</title>
-        <h1 className="text-blue-800"> testing :D </h1>
+        <h1 className="text-blue-800"> </h1>
       </Head>
 
       {/* Header */}
