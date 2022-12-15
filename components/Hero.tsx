@@ -23,7 +23,7 @@ export default function Hero({}: Props) {
             <BackgroundCircles />
             <img 
                 className= "relative rounded-full h-32 w-32 mx-auto object-cover"
-                src=""
+                src="https://sdk.bitmoji.com/render/panel/20048676-99143891879_5-s5-v1.png?transparent=1&palette=1&scale=1"
                 alt=""
             />
             <div className="z-20">
