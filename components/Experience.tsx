@@ -1,35 +1,26 @@
-import React from 'react'
-import { motion } from 'framer-motion'
-import ExperienceCard from './ExperienceCard'
+import React from "react";
+import { motion } from "framer-motion";
+import FirstExperienceCard from "./ExperienceCards/FirstExperienceCard";
 
-type Props = {}
+type Props = {};
 
 function Experience({}: Props) {
   return (
-    
-    <motion.div 
-    initial={{ opacity: 0 }}
-    whileInView= {{ opacity: 1 }}
-    transition={{ duration: 1.5 }}
-
-    className="h-screen flex relative overflow-hidden flex-col text-left md:flex-row max-w-full px-10 justify-evenly mx-auto items-center p-10">
-        <h3 className= "relative top-24 uppercase tracking-[20px] text-gray-500 text-2xl shrink">
-            Experience
-        </h3>
-        <div
-        className="w-full flex space-x-5 overflow-x-scroll p-10 snap-x snap-mandatory scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80"
-        >
-            {/* Experience Card */}
-            <ExperienceCard />
-            {/* Experience Card */}
-            <ExperienceCard />
-            {/* Experience Card */}
-            <ExperienceCard />
-            {/* Experience Card */}
-            <ExperienceCard />
+    <div>
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1.5 }}
+        className="flex flex-col relative text-center md:left-text md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center space-y-4 shrink"
+      >
+        <div className="w-full top-24 flex space-x-5 overflow-x-scroll p-10 snap-x snap-mandatory scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
+          <FirstExperienceCard />
+          <FirstExperienceCard />
+          <FirstExperienceCard />
         </div>
-    </motion.div>
-  )
+      </motion.div>
+    </div>
+  );
 }
 
-export default Experience
+export default Experience;
