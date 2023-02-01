@@ -33,11 +33,9 @@ export default function About({}: Props) {
           background about me...
         </h4>
         <p className="text-base">
-          My name is Grant! I'm a full stack developer who currently lives in
-          San José, California. I graduated from college in 2022 from George
-          Washington University. I have worked in all sorts of different places,
-          from enterprise to startups. I love to build and scale responsive web
-          applications. Let's connect!
+          {
+            "My name is Grant! I'm a full stack developer who currently lives in San José, California. I graduated from college in 2022 from George Washington University. I have worked in all sorts of different places, from enterprise to startups. I love to build and scale responsive web applications. Let's connect!"
+          }
         </p>
       </div>
     </div>

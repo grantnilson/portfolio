@@ -26,7 +26,10 @@ function Projects({}: Props) {
         scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80"
       >
         {projects.map((project, i) => (
-          <div className="w-screen flex-shrink-0 snap-center flex flex-center space-y-5 items-center justify-center p-20 md:p-44 h-screen">
+          <div
+            key={i}
+            className="w-screen flex-shrink-0 snap-center flex flex-center space-y-5 items-center justify-center p-20 md:p-44 h-screen"
+          >
             <motion.img
               initial={{
                 y: -300,

@@ -4,7 +4,7 @@ import FirstExperienceCard from "./ExperienceCards/FirstExperienceCard";
 
 type Props = {};
 
-function WorkExperience({}: Props) {
+function Experience({}: Props) {
   return (
     <div>
       <motion.div
@@ -23,4 +23,4 @@ function WorkExperience({}: Props) {
   );
 }
 
-export default WorkExperience;
+export default Experience;
