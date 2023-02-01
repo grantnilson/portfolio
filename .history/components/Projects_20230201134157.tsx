@@ -32,18 +32,16 @@ function Projects({ projects }: Props) {
         {projects.map((project, i) => (
           <div
             key={i}
-            className="w-screen flex-shrink-0 snap-center flex flex-center space-y-5 items-center justify-center p-20 md:p-44 h-screen"
+            className="w-screen flex-shrink-0 snap-center flex space-y-4 flex-center space-y-5 items-center justify-center p-20 md:p-44 h-screen"
           >
-            <div className="text-4xl font-semibold text-center space-y-4">
+            <div className="text-4xl font-semibold text-center">
               <h4>{project?.title}</h4>{" "}
-              <p className="text-sm text-left md:text-left">
+              <p className="text-lg text-left md:text-left">
                 {" "}
                 {project?.summary}{" "}
               </p>
               <div>
-                <Link className="underline" href={project?.linkToBuild}>
-                  Github
-                </Link>
+                <Link href={project?.linkToBuild}>Github</Link>
               </div>
             </div>
           </div>

@@ -2,7 +2,6 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Project } from "../typings";
 import { urlFor } from "../sanity";
-import Link from "next/link";
 
 type Props = {
   projects: Project[];
@@ -34,17 +33,32 @@ function Projects({ projects }: Props) {
             key={i}
             className="w-screen flex-shrink-0 snap-center flex flex-center space-y-5 items-center justify-center p-20 md:p-44 h-screen"
           >
-            <div className="text-4xl font-semibold text-center space-y-4">
-              <h4>{project?.title}</h4>{" "}
-              <p className="text-sm text-left md:text-left">
+            <motion.img
+              initial={{
+                y: -300,
+                opacity: 0,
+              }}
+              transition={{
+                duration: 1.5,
+              }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+              }}
+              viewport={{ once: true }}
+              src={urlFor(project?.image).url()}
+              alt=""
+            />
+            <div className="text-4xl font-semibold text-center">
+              <h4>
+                <span className="underline decoration-[#f7ab0a]/50">
+                  Project {i + 1} of {projects.length} : Project Name{" "}
+                </span>
+              </h4>
+              <p className="text-lg text-center md:text-left">
                 {" "}
-                {project?.summary}{" "}
+                project description{" "}
               </p>
-              <div>
-                <Link className="underline" href={project?.linkToBuild}>
-                  Github
-                </Link>
-              </div>
             </div>
           </div>
         ))}
