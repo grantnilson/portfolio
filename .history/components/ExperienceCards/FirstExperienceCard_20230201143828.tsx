@@ -24,15 +24,15 @@ export default function FirstExperienceCard({ experience }: Props) {
         )}
       </div>
       <div className="px-0 md:px-10 ">
-        <h4 className="text-2xl font-bold">{experience?.jobTitle} </h4>
-        <p className="font-bold text-xl mt-1"> {experience?.company} </p>
+        <h4 className="text-4xl font-light">{experience?.jobTitle} </h4>
+        <p className="font-bold text-2xl mt-1"> {experience?.company} </p>
         <div className="flex space-x-2 my-2 "></div>
         <p className="uppercase py-5 text-gray-300">
           {" "}
           {experience?.dateStarted} - {experience?.dateEnded}
         </p>
 
-        <ul className="list-disc space-y-4 ml-5 text-sm max-h-96 max-w-56 p-10">
+        <ul className="list-disc space-y-4 ml-5 text-sm max-h-56 w-4/5 overflow-y-scroll scrollbar-thin p-10 scrollbar-track-black">
           {experience.points.map((point, i) => (
             <li key={i}>{point}</li>
           ))}
