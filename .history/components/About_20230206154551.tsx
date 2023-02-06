@@ -42,7 +42,7 @@ export default function About({ pageInfo }: Props) {
           </span>{" "}
         </h4>
         <p className="text-left">{pageInfo[0]?.backgroundInformation}</p>
-        <div className="space-y-10 px-0 md:px-10">
+        <div className=" text-left space-y-10 px-0 md:px-10">
           <a
             href="/Grant Nilson Resume .pdf"
             target="_blank"

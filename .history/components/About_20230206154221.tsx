@@ -35,13 +35,15 @@ export default function About({ pageInfo }: Props) {
         />
       )}
       <div className="space-y-10 px-0 md:px-10 shrink">
-        <h4 className="text -left text-4xl font-semibold">
+        <h4 className="text-4xl font-semibold">
           Here is a little bit about my{" "}
           <span className="underline decoration-[#F7AB0A]/50">
             background...
           </span>{" "}
         </h4>
-        <p className="text-left">{pageInfo[0]?.backgroundInformation}</p>
+        <p className=" text-left text-base">
+          {pageInfo[0]?.backgroundInformation}
+        </p>
         <div className="space-y-10 px-0 md:px-10">
           <a
             href="/Grant Nilson Resume .pdf"
