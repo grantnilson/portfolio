@@ -54,7 +54,7 @@ export default function Hero({ pageInfo }: Props) {
           <span className="mr-3">{text}</span>
           <Cursor cursorColor="#F7AB0A" />
         </h1>
-        <div className="pt-4">
+        <div className="py-px">
           <Link href="#about">
             <button className="heroButton">About</button>
           </Link>

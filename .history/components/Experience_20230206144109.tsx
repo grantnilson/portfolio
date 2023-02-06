@@ -11,7 +11,7 @@ function WorkExperience({ experiences }: Props) {
   return (
     <>
       <div>
-        <h3 className="top-24 invisible md:visible text-center uppercase tracking-[20px] text-gray-500 text-2xl shrink">
+        <h3 className="top-24 uppercase tracking-[20px] text-gray-500 text-2xl shrink">
           Experience
         </h3>
         <motion.div

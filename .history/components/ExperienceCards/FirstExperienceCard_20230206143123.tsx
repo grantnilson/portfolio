@@ -10,7 +10,7 @@ type Props = {
 export default function FirstExperienceCard({ experience }: Props) {
   const companyURL = experience?.companyImage;
   return (
-    <article className="flex flex-col min-h-screen overflow-x-auto overflow-y-scroll rounded-lg items-center space-y-7 flex-shrink-0 w-[500px] md:w-[600px] xl:w-[900px] snap-center bg-[#292929] p-10 hover:opacity-100 opacity-40">
+    <article className="flex flex-col h-flex rounded-lg items-center space-y-7 flex-shrink-0 w-[500px] md:w-[600px] xl:w-[900px] snap-center bg-[#292929] p-10 hover:opacity-100 opacity-40">
       <div className="top-10">
         {experience?.companyImage && (
           <motion.img
@@ -32,7 +32,7 @@ export default function FirstExperienceCard({ experience }: Props) {
           {experience?.dateStarted} - {experience?.dateEnded}
         </p>
 
-        <ul className="list-disc space-y-4 ml-5 text-sm max-h-96 max-w-56 p-10">
+        <ul className="list-disc space-y-4 ml-5 text-sm max-h-96 w-32 p-10">
           {experience.points.map((point, i) => (
             <li key={i}>{point}</li>
           ))}

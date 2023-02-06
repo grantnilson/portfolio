@@ -36,7 +36,7 @@ export default function Hero({ pageInfo }: Props) {
         <div>
           {pageInfo[0]?.heroImage && (
             <Image
-              className="relative pb-4 rounded-full h-32 w-32 mx-auto object-cover"
+              className="relative rounded-full h-32 w-32 mx-auto object-cover"
               src={urlFor(url).url()}
               width={128}
               height={128}
@@ -46,7 +46,7 @@ export default function Hero({ pageInfo }: Props) {
         </div>
       }
 
-      <div className="z-20 py-4px">
+      <div className="z-20">
         <h2 className="text-sm uppercase text-gray-500 pb-2 tracking-[15px]">
           {pageInfo[0]?.role}
         </h2>
@@ -54,7 +54,7 @@ export default function Hero({ pageInfo }: Props) {
           <span className="mr-3">{text}</span>
           <Cursor cursorColor="#F7AB0A" />
         </h1>
-        <div className="pt-4">
+        <div>
           <Link href="#about">
             <button className="heroButton">About</button>
           </Link>

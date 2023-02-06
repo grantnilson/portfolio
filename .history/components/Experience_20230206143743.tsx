@@ -11,9 +11,9 @@ function WorkExperience({ experiences }: Props) {
   return (
     <>
       <div>
-        <h3 className="top-24 invisible md:visible text-center uppercase tracking-[20px] text-gray-500 text-2xl shrink">
-          Experience
-        </h3>
+        <h1>experience</h1>
+      </div>
+      <div>
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}

@@ -10,7 +10,8 @@ type Props = {
 export default function FirstExperienceCard({ experience }: Props) {
   const companyURL = experience?.companyImage;
   return (
-    <article className="flex flex-col min-h-screen overflow-x-auto overflow-y-scroll rounded-lg items-center space-y-7 flex-shrink-0 w-[500px] md:w-[600px] xl:w-[900px] snap-center bg-[#292929] p-10 hover:opacity-100 opacity-40">
+    <article className="flex flex-col h-flex rounded-lg items-center space-y-7 flex-shrink-0 h-w-[300px] md:w-[400px] xl:w-[500px] snap-center bg-[#292929] p-10 hover:opacity-100 opacity-40">
+      <h1> Experience</h1>
       <div className="top-10">
         {experience?.companyImage && (
           <motion.img
