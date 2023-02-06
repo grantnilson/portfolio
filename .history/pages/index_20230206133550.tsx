@@ -6,7 +6,7 @@ import Hero from "../components/Hero";
 import About from "../components/About";
 import WorkExperience from "../components/Experience";
 import Projects from "../components/Projects";
-import { GetStaticProps, GetServerSideProps, NextPage } from "next";
+import { GetStaticProps, NextPage } from "next";
 import { type } from "os";
 import { Experience, PageInfo, Project } from "../typings";
 import { fetchPageInfo } from "../utils/fetchPageInfo";
@@ -55,9 +55,8 @@ const Home = ({ pageInfo, experience, projects }: Props) => {
 };
 
 export default Home;
-/*
 
-export const getStaticProps: GetStaticProps<Props> = async () => {
+export const getServerSideProps: GetStaticProps<Props> = async () => {
   const pageInfo: PageInfo[] = await fetchPageInfo();
   const experience: Experience[] = await fetchExperience();
   const projects: Project[] = await fetchProject();
@@ -71,21 +70,3 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
     revalidate: 10,
   };
 };
-*/
-
-export async function getServerSideProps() {
-  // Fetch data from external API
-  const pageInfo: PageInfo[] = await fetchPageInfo();
-  const experience: Experience[] = await fetchExperience();
-  const projects: Project[] = await fetchProject();
-
-  // Pass data to the page via props
-  return {
-    props: {
-      pageInfo,
-      experience,
-      projects,
-    },
-    revalidate: 10,
-  };
-}

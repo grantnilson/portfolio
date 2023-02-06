@@ -1,10 +1,9 @@
 import {createClient, groq} from 'next-sanity'
 import imageUrlBuilder from '@sanity/image-url'
 
-const projectId = "pcejs438" // ""
-//console.log(projectId); 
+const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID // ""
 const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET // "production"
-const apiVersion = "2022-02-03"
+const apiVersion = process.env.NEXT_PUBLIC_SANITY_API_VERSION 
 
 export const client = createClient({
   projectId,
