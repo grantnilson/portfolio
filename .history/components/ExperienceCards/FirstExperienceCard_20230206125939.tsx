@@ -32,7 +32,7 @@ export default function FirstExperienceCard({ experience }: Props) {
           {experience?.dateStarted} - {experience?.dateEnded}
         </p>
 
-        <ul className="list-disc space-y-4 ml-5 text-sm max-h-96 max-w-56 p-10">
+        <ul className="list-disc space-y-4 ml-5 text-sm max-h-56 w-4/5 p-10">
           {experience.points.map((point, i) => (
             <li key={i}>{point}</li>
           ))}
